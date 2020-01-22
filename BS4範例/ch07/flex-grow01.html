@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--flex-grow-1為物件保留必要空間以做填充-->
+    <div class="d-flex bg-light text-white">
+        <div class="p-2 bg-danger flex-grow-1">item-left</div>
+        <div class="p-2 bg-warning">item-center</div>
+        <div class="p-2 bg-info">item-right</div>
+    </div>
+    <br>
+    <!--.flex-shrink-1壓縮物件所佔用的排版-->
+    <div class="d-flex bg-light text-white">
+        <div class="p-2 bg-danger flex-shrink-1">item-left</div>
+        <div class="p-2 bg-warning">item-center</div>
+        <div class="p-2 bg-info">item-right</div>
+    </div>
+</body>
+</html>

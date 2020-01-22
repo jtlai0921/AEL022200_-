@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>問卷調查</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function fnSend() {
+            var name = $("#txt_name").val();	//取得姓名欄位value
+            //取得性別欄位被選取的value
+            var gender = $("[name=radGender]:checked").val();
+            if (gender == 0) {	//判斷是否核取「女」的核取方塊
+                alert(name + "小姐，您好！");
+            } else {
+                alert(name + "先生，您好！");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container" style="margin-top:30px;">
+        <div class="card">
+            <div class="card-header bg-primary text-white">問卷調查</div>
+            <div class="card-body">
+                <p>
+                    姓名：<input id="txt_name" type="text" class="form-control">
+                </p>
+                <p>
+                    性別：
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radGender"
+                               id="radM" value="1" checked>
+                        <label class="form-check-label" for="radM">男</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radGender"
+                               id="radF" value="0">
+                        <label class="form-check-label" for="radF">女</label>
+                    </div>
+                </p>
+                <p>
+                    <input type="button" value="送出" id="btnSend" class="btn btn-primary"
+                           onclick="fnSend();" />
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

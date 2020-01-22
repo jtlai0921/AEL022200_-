@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <script>
+        //建立一維陣列product
+        var product = new Array();
+        //product[0]~product[2] 陣列元素再建立一維陣列用來存放產品資料
+        product[0] = ["PS4 Slim主機 CUH-2117", 9980, "ps4.jpg"];
+        product[1] = ["任天堂 Nintendo Switch 藍紅手把組", 12990,"switch.jpg"];
+        product[2] = ["Xbox One S 500G同捆組", 11000,"xboxone.jpg"];
+        document.write("<table class='table table-hover'>");
+        document.write("<tr class='table-warning'>");
+        document.write("<td>品名</td>");
+        document.write("<td>單價</td>");
+        document.write("<td>產品圖示</td>");
+        document.write("</tr>");
+        //使用迴圈配合表格印出產品資料
+        for (var i = 0; i < product.length; i++) {
+            document.write("<tr>");
+            document.write("<td>" + product[i][0] + "</td>");
+            document.write("<td>" + product[i][1] + "</td>");
+            //印出產品圖
+            document.write("<td><img src='images/" + product[i][2] + "' class='img-thumbnail' width='150'></td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

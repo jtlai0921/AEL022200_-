@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        視需要在下方的中繼標籤中自訂內容安全性原則。將 'unsafe-inline' 加入 default-src 以啟用內嵌 JavaScript。
+        如需詳細資料，請參閱 http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+        <script src="scripts/jquery-1.11.1.min.js"></script>
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+        <title>prjHelloApp</title>
+    </head>
+    <body>
+        <!--<div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">正在連接到裝置</p>
+                <p class="event received">裝置已就緒</p>
+            </div>
+        </div>-->
+        <div data-role="page" id="pageIndex">
+            <div data-role="header"><h2>WelCome DTC</h2></div>
+            <div data-role="content" style="text-align:center;">
+                <p>第一個Android App</p>
+                <p><img src="images/dtc-logo.png" style="max-width:60%;" /></p>
+                <p><a href="#pageHello" data-role="button" data-rel="dialog">關於DTC</a></p>
+            </div>
+            <div data-role="footer" data-position="fixed"><h2>專業, 服務, 用心</h2></div>
+        </div>
+        <div data-role="page" id="pageHello">
+            <div data-role="content">
+                <p>DTC 擁最優質、最專業、最用心的服務團隊，幫助客戶解決問題刻不容緩。</p>
+                <p><a href="#pageIndex" data-role="button" data-rel="dialog">返回</a></p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>

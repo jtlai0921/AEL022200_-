@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //取得陣列總和
+        function getSum(ary) {
+            var sum = 0;
+            // 陣列的length可取得陣列的長度(即個數)
+            for (var i = 0; i < ary.length; i++) {
+                sum += ary[i];
+            }
+            return sum;  //傳回陣列加總
+        }
+
+        var score = [89, 56, 77, 90, 43];
+        var arysum = getSum(score); //呼叫getSum()傳回score總和
+        alert("score = [89, 56, 77, 90, 43] 陣列\n總和：" + arysum);
+
+        var score2 = [100, 98, 54, 78, 99, 43, 66];
+        alert("score2 = [100, 98, 54, 78, 99, 43, 66] 陣列\n總和：" +
+            getSum(score2));  //若函式有傳回值可以直接當成一個運算結果
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

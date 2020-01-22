@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>jQuery特效</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnShow").on("click", function () {
+                $("#imgDog").show(500); //顯示
+            });
+            $("#btnHide").on("click", function () {
+                $("#imgDog").hide("slow"); //隱藏
+            });
+            $("#btnFadein").on("click", function () {
+                $("#imgDog").fadeIn("fast"); //淡入
+            });
+            $("#btnFadeout").on("click", function () {
+                $("#imgDog").fadeOut("normal"); //淡出
+            });
+            $("#btnFadetoggle").on("click", function () {
+                $("#imgDog").fadeToggle(1500); //淡入淡出切換
+            });
+            $("#btnSlidedown").on("click", function () {
+                $("#imgDog").slideDown(); //向下滑動
+            });
+            $("#btnSlideup").on("click", function () {
+                $("#imgDog").slideUp("fast"); //向上滑動
+            });
+            $("#btnSlidetoggle").on("click", function () {
+                $("#imgDog").slideToggle("slow"); //向下向上滑動切換
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container" style="margin-top:20px;">
+        <p>
+            <input type="button" id="btnShow" value="顯示" class="btn btn-info" />
+            <input type="button" id="btnHide" value="隱藏(慢速)" class="btn btn-info" />
+            <input type="button" id="btnFadein" value="淡入(快速)" class="btn btn-info" />
+            <input type="button" id="btnFadeout" value="淡出(正常)" class="btn btn-info" />
+        </p>
+        <p>
+            <input type="button" id="btnFadetoggle" value="淡入/淡出 切換(1.5秒)" class="btn btn-info" />
+            <input type="button" id="btnSlidedown" value="向下滑" class="btn btn-info" />
+            <input type="button" id="btnSlideup" value="向上滑(快速)" class="btn btn-info" />
+            <input type="button" id="btnSlidetoggle" value="滑動 切換(慢速)" class="btn btn-info" />
+        </p>
+        <p><img src="images/dog.png" id="imgDog" /></p>
+    </div>
+</body>
+</html>

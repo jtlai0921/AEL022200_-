@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>大才全優質書籍</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        img{
+            width:180px;
+            margin-right:20px;
+        }
+
+        .div_book {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            height: 400px;
+        }
+
+        /*具有data-spy="scroll"設定的元素，需要額外定義position: relative; 使滾動區域輔以相對定位*/
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#mvc">ASP.NET MVC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#html5">網頁設計</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#python">Python</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="mvc" class="container-fluid bg-success text-light div_book" >
+        <h4>跟著實務學習ASP.NET MVC</h4>
+        <img src="images/AEL019800.jpg" class="float-left"  />
+        <p>本書由熱血的幾位微軟最有價值專家執筆，從最基礎的角度、搭配最先進的開發工具及軟體套件，讓讀者輕鬆無礙地學習並實作各種網站應⽤程式。</p>
+    </div>
+    <div id="html5" class="container-fluid bg-warning text-light div_book">
+        <h4>跟著實務學習網頁設計</h4>
+        <img src="images/AEL021400.jpg" class="float-left" />
+        <p>使用大量範例輔助初學者學習HTML5, CSS, JavaScript, Bootstrap, jQuery，使初學者快速進入網頁開發領域。</p>
+    </div>
+    <div id="python" class="container-fluid bg-info text-light div_book" >
+        <h4>Python基礎必修課</h4>
+        <img src="images/AEL022100.jpg" class="float-left"  />
+        <p>內容兼具理論與實務，由書中範例說明，問題分析、程式架構，訓練初學者邏輯思考、解決問題的能力，使初學者輕鬆邁入Python程式設計的殿堂。</p>
+    </div>
+
+</body>
+</html>

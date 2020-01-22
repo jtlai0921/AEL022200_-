@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>嵌套媒體對象</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        img {
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="media border p-3">
+            <img src="images/book01.png" class="mr-3" >
+            <div class="media-body mt-2">
+                <h4>
+                    跟著實務學習ASP.NET MVC
+                    <small class="ml-3">
+                        <i>NT$520</i>
+                    </small>
+                </h4>
+                <p>本書由淺入深，⼀步步帶領讀者進入ASP.NET MVC的技術。</p>
+                <!--在具有.media-body類別的<div>容器中放入第2組媒體物件，代表第2層媒體物件-->
+                <div class="media p-3">
+                    <img src="images/book02.png" class="mr-3" >
+                    <div class="media-body mt-2">
+                        <h4>
+                            跟著實務學習網頁設計
+                            <small class="ml-3">
+                                <i>NT$510</i>
+                            </small>
+                        </h4>
+                        <p>
+                            網頁程式設計最佳教材，數百個範例讓初學者隨時套用。
+                        </p>
+                        <!--在具有.media-body類別的第2組<div>容器中放入第3組媒體物件，代表第3層媒體物件-->
+                        <div class="media p-3">
+                            <img src="images/book03.png" class="mr-3">
+                            <div class="media-body mt-2">
+                                <h4>
+                                    C & C++程式設計經典
+                                    <small class="ml-3">
+                                        <i>NT$600</i>
+                                    </small>
+                                </h4>
+                                <p>
+                                    本書介紹介紹C++函式指標、樣板、例外處理、STL
+                                    等進階議題。
+                                </p>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>大才全優質書籍</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        //網頁元素載入就緒執行ready事件
+        $(document).ready(function () {
+            // 宣告img, title, info用來放置四筆書籍圖片、書名與單價
+            var img = new Array("AEL019800.jpg", "AEL021400.jpg", "AEL022100.jpg", "AEL019300.jpg");
+            var title = new Array("跟著實務學習ASP.NET MVC", "跟著實務學習網頁設計", "Python基礎必修課", "Visual C# 2017程式設計經典");
+            var price = new Array(520, 490, 450, 650);
+            //宣告html字串用來存放要附加的網頁內容
+            var html = "";
+            //將#divShow的內容清除
+            $("#divShow").empty();
+            //使用for迴圈將img, title, price的書籍資料
+            //如書籍的圖片、書名、單價放入#divShow內
+            for (var i = 0; i < img.length; i++) {
+                html =
+                    "<div class='col-12 col-md-4'>" +
+                        "<div class='img-thumbnail'>" +
+                            "<img src='images/"+img[i]+"' style='width:150px;' />" +
+                            "<h5>"+title[i]+"</h5>" +
+                            "<p>單價："+price[i]+"</p>" +
+                            "<p><a href='#' class='btn btn-success'>放入購物車</a></p>" +
+                        "</div>" +
+                    "</div>"
+                $("#divShow").append(html);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container" style="margin-top:30px;">
+        <div class="row" id="divShow">
+        </div>
+    </div>
+</body>
+</html>

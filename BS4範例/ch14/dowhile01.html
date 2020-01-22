@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>旅行相簿</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        a:hover {
+            opacity: 0.2;
+            transform: rotate(10deg);
+        }
+
+        img {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var i = 1; //宣告i等於1
+        do {
+            document.write("<a href='#'><img src='images/" + i + ".jpg' class='rounded-circle'></a>");
+            i++; //i加1再指定給i
+        } while (i <= 9); //i小於等於9時即執行迴圈內程式
+    </script>
+</body>
+</html>

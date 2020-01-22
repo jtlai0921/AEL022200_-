@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>大才全優質書籍</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        //網頁元素載入就緒執行ready事件
+        $(document).ready(function () {
+            // 宣告index用來代表目前是第幾筆記錄，0表示第一筆
+            var index = 0;
+            // 宣告img, title, info用來放置四筆書籍圖片、書名與書籍說明
+            var img = new Array("AEL019800.jpg", "AEL021400.jpg", "AEL022100.jpg", "AEL019300.jpg");
+            var title = new Array("跟著實務學習ASP.NET MVC", "跟著實務學習網頁設計", "Python基礎必修課", "Visual C# 2017程式設計經典");
+            var info = new Array
+                ("本書由熱血的幾位微軟最有價值專家執筆，從最基礎的角度、搭配最先進的開發工具及軟體套件，讓讀者輕鬆無礙地學習並實作各種網站應⽤程式。",
+                "使用大量範例輔助初學者學習HTML5, CSS, JavaScript, Bootstrap, jQuery，使初學者快速進入網頁開發領域。",
+                "內容兼具理論與實務，由書中範例說明，問題分析、程式架構，訓練初學者邏輯思考、解決問題的能力，使初學者輕鬆邁入Python程式設計的殿堂。",
+                "是一本適合大專院校教學，以及MTA、MCP、MCPD、MCSD認證課程的先修教材。內容豐富，範例操作與解說皆有圖例、分析與詳細說明，讓初學者學習完全無障礙。");
+
+            //呼叫setData()函式，在卡片中顯示第index個陣列元素書籍的資訊
+            setData(index);
+
+            //建立setData()函式用來指定卡片的書籍內容
+            function setData(index) {
+                $("#bookTitle").text(title[index]);
+                $("#bookImg").attr("src", "images/" + img[index]);
+                $("#bookinfo").text(info[index]);
+            }
+
+            // 按下 [下一筆] 鈕，btnNext按鈕
+            $("#btnNext").on("click", function () {
+                //移往下一筆
+                index++;
+                //判斷是否超出最後一筆
+                if (index >= img.length) {
+                    //指定從第一筆開始
+                    index = 0;
+                }
+                //呼叫setData()函式，在卡片中顯示第index個陣列元素書籍的資訊
+                setData(index);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container" style="margin-top:30px;">
+        <div class="card">
+            <div class="card-header bg-primary text-white"><span id="bookTitle"></span></div>
+            <div class="card-body">
+                <img id="bookImg"  class="float-left" style="width:200px;" />
+                <p id="bookinfo" class="m-2"></p>
+            </div>
+        </div>
+        <br />
+        <input type="button" value="下一筆" id="btnNext" class="btn btn-primary" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>modal01</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+        <div class="container mt-3">
+            <h2>互動視窗</h2>
+
+            <!-- 開啟互動視窗的按鈕 -->
+            <button type="button" class="btn btn-info" data-toggle="modal"
+                    data-target="#myModal">
+                .NET 書籍
+            </button>
+
+            <!-- 互動視窗 -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- 互動視窗頁首 -->
+                        <div class="modal-header">
+                            <h3 class="modal-title">.NET 優質書籍</h3>
+                            <button type="button" class="close"
+                                    data-dismiss="modal">
+                                ×
+                            </button>
+                        </div>
+
+                        <!-- 互動視窗主體 -->
+                        <div class="modal-body">
+                            <img src="images/BkImage01.jpg" width="100" />
+                            <img src="images/BkImage02.jpg" width="100" />
+                            <div>
+                                作者連續榮獲十年MVP榮銜，致力於微軟技術的推廣
+                                已超過十多年，熱心於社群中分享所學。本書以實務
+                                教導、清晰的解說，讓您輕鬆地邁向
+                                ASP.NET MVC與C#之路。
+                            </div>
+                        </div>
+
+                        <!-- 互動視窗頁尾 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">
+                                取消
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+</html>

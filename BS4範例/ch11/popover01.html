@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap Example</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" style="margin-top:50px;">
+        <button type="button" class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="right" title="Popover on right" data-content="彈出提示框(Popover)的彈出位置在按鈕右方">
+            Popover on right
+        </button>
+        <button type="button" class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="top" title="Popover on top" data-content="彈出提示框(Popover)的彈出位置在按鈕上方">
+            Popover on top
+        </button>
+        <button type="button" class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="bottom" title="Popover on bottom" data-content="彈出提示框(Popover)的彈出位置在按鈕下方">
+            Popover on bottom
+        </button>
+        <button type="button" class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="left" title="Popover on left" data-content="彈出提示框(Popover)的彈出位置在按鈕左方">
+            Popover on left
+        </button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</body>
+</html>

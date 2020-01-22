@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var id, num, bar, btnDownLoad;
+        // 按下 [下載檔案] 執行fnDownLoad函式
+        function fnDownLoad() {
+            bar = document.getElementById("bar");
+            btnDownLoad = document.getElementById("btnDownLoad");
+            btnDownLoad.disabled = true;    //  [下載檔案] 不啟用
+            bar.innerHTML =  "0%";
+            bar.style = "width:0%";
+            num = 0;
+            // 使用setInterval()建立計數變數id，每0.1秒執行fnGetFile函式一次
+            id = setInterval(fnGetFile, 100);  
+        }
+
+        function fnGetFile() {
+            num++;
+            bar.innerHTML = num + "%";
+            bar.style = "width:" + num + "%";
+            // 當 num 等於100即表示檔案下載完成
+            if (num == 100) {
+                btnDownLoad.disabled = false;   //  [下載檔案] 啟用
+                clearInterval(id);   // 停止計數變數id的函式
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container p-5">
+        <div class="progress">
+            <div class="progress-bar" style="width:0%" id="bar">0%</div>
+        </div>
+        <p></p>
+        <p><input type="button" value="下載檔案" id="btnDownLoad" class="btn btn-primary" onclick="fnDownLoad();" /></p>     
+    </div>
+</body>
+</html>
